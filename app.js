@@ -8,8 +8,9 @@ const app = express()
 
 app.use(body_parser.json())
 
-app.use('/', userRouter)
+
 app.use('/', taskRouter)
+app.use('/', userRouter)
 
 
 module.exports = app

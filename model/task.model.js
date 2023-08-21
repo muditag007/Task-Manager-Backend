@@ -4,6 +4,7 @@ const db = require('../config/db')
 const { Schema } = mongoose
 
 const taskSchema = new Schema({
+  // password:Array,
   email: {
     type: String,
     required: true,
@@ -34,6 +35,6 @@ const taskSchema = new Schema({
   }
 })
 
-const TaskModel = db.model('tasks', taskSchema)
+const TaskModel = mongoose.model('tasks', taskSchema)
 
 module.exports = TaskModel

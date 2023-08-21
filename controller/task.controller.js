@@ -4,6 +4,7 @@ const TaskService = require('../services/task.services')
 exports.add = async (req, res, next) => {
   try {
     const { email, tasks } = req.body
+    console.log("Here is me ")
     console.log(tasks['title'])
 
     const successRes = await TaskService.addTask(email, tasks)
